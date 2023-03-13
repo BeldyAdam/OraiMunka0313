@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="valid.js"></script>
     <title>Béldy Ádám</title>
 </head>
 <body>
@@ -13,19 +13,19 @@
     <form name="validTeszt" method="get" action="#" onsubmit="return validateForm()">
         <div class="sor">
         <label for="vnev">Vezetéknév:</label>
-        <input type="text" id="vnev" name="vnev">
+        <input type="text" id="vnev" name="vnev" pattern="[A-Z][A-Za-z]{3}" placeholder="Vezetéknév" required>
     </div>
     <div class="sor">
         <label for="knev">Keresztnév:</label>
-        <input type="text" id="knev" name="knev">
+        <input type="text" id="knev" name="knev" pattern="[A-Z][A-Za-z]{3}" placeholder="Keresztnév" required>
     </div>
     <div class="sor">
         <label for="pwd">Jelszó:</label>
-        <input type="password" id="pwd" name="pwd">
+        <input type="password" id="pwd" name="pwd" required>
     </div>
         <div class="sor">
         <label for="pwd">Jelszó megerősítése:</label>
-        <input type="password" id="pwd" name="pwd">
+        <input type="password" id="pwd" name="pwd" required>
     </div>
     <div class="sor">
         <button>Submit</button>
